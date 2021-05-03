@@ -1,14 +1,10 @@
 import { IOClients } from '@vtex/api'
 
-import { BookClient } from './book'
-import { MarkdownClient } from './markdown'
+import { SearchClient } from './search'
+// import { SearchClient } from './searchV1'
 
 export class Clients extends IOClients {
-  get book() {
-    return this.getOrSet('book', BookClient)
-  }
-
-  get markdown() {
-    return this.getOrSet('markdown', MarkdownClient)
+  get search() {
+    return this.getOrSet('search', SearchClient)
   }
 }
